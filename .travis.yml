@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- stable
+cache:
+  directories:
+  - node_modules
+deploy:
+  provider: heroku
+  api_key:
+    secure: KEY
+  app: political-sentiment-analyzer
+  on:
+    repo: RTatineni/political-sentiment-analyzer

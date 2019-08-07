@@ -1,7 +1,7 @@
 const axios = require("axios");
 const router = require("express").Router();
 
-// random Route just for testing
+// random get method just for testing routes working.
 router.get("/recipes", (req, res) => {
     axios
       .get("http://www.recipepuppy.com/api/", { params: req.query })

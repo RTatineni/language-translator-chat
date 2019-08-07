@@ -1,12 +1,12 @@
 import React from "react";
-import axios from 'axios';
 
 class Signup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       username: "",
-      password: ""
+      password: "",
+      password2:""
     };
   }
 
@@ -24,6 +24,9 @@ class Signup extends React.Component {
       this.setState({password: e.target.value})
   }
 
+  handleChangePasswordRepeat(e){
+    this.setState({password2:e.target.value})
+  }
 
 
   render() {
@@ -39,10 +42,20 @@ class Signup extends React.Component {
             onChange={this.handleChangeUsername}
             className="input"
           />
+          <br></br>
+          <label htmlFor="username">What is your Password?</label>
           <input
             type="password"
             name="password"
             onChange={this.handleChangePassword}
+            className="input"
+          />
+          <br></br>
+          <label htmlFor="username">Enter your Password again plz?</label>
+           <input
+            type="password"
+            name="password"
+            onChange={this.handleChangePasswordRepeat}
             className="input"
           />
           <button className="submit">Login</button>

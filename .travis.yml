@@ -8,8 +8,8 @@ deploy:
   provider: heroku
   api_key:
     secure: Q6sLiQjxNl6muhQM9hCY0GCfd5XlnL5nEJLxZ6grffEazamtqNu4rJvQzr1126CTF4Tzwp7hqDO8U2q/VTkrVLG9MPyTvJFDGnw7BvnfUEXEK0EzIbJEaynO7BauF4LaDSBeYk8oPvvwCPe1SCiaad5BBacUznv+xPl2m/eDSZUfJ2ukiWtUZDEDnQJIRO6nYeeerq4cZ3+kcGtG3nW0ff66ohIce0rMdrLP9fGxLagrl9FCz8IxiNIpKPV+eTi8J0GBoUMv3ERDGIzjCji1hdfDNiikN4K5H3KUAcnpbFbd3lj9XpaMKsJSaxgYxQa6bpwRDaAvj24AHrIGhZLHVCycWSESeCkZXQTY4f33zxH260O2DxBBeE3097Ne1yQytElrlisom8JFmI+K/4EKht0C4fTt8fAdSZyOeArUjbFwB0bQuM0Yd0lli8XcjSZl3AAWuW8dZKrsktpXwLOc0YRRaw6o2aA3go0BbQRVLz7+MzGJNqwa58vv3A6Kvs3BYua93q9takQaZ2ILpNKkTDqlqPP6+iDTl4Jp8Joqd8d3ZQLp9x++t0vN18YVQ21+jZdiq0i1UF2MGSB7oQ6mbKLlFgv0zuT4uFWdREDAwVp4oa7AKfCudpDNsXttvq5MVbF8NwOk8NyUoXQYADEvgx6vlQSRuM6rRLP2Z//OR2w=
-  app: political-sentiment-analyzer
+  app: language-translator-chat
   on:
-    repo: RTatineni/political-sentiment-analyzer
+    repo: RTatineni/language-translator-chat
     
 

@@ -1,7 +1,7 @@
 {
-  "name": "political-sentiment-analyzer",
+  "name": "language-translator-chat",
   "version": "1.0.0",
-  "description": "political-sentiment-analyzer",
+  "description": "language-translator-chat",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
@@ -12,7 +12,6 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build",
     "test": "mocha"
-
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +20,7 @@
     "nodemon": "^1.18.7"
   },
   "dependencies": {
+    "@material-ui/core": "^4.3.1",
     "axios": "^0.18.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",

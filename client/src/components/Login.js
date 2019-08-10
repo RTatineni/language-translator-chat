@@ -11,7 +11,7 @@ class Login extends React.Component {
         currUser: e.target.value
     })
   }
-
+  
   onSubmit = e => {
       e.preventDefault()
       this.props.onSubmit(this.state.currUser)

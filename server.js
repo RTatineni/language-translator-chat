@@ -1,5 +1,4 @@
 const express = require("express");
-const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
@@ -8,6 +7,9 @@ const keys =require("./config/keys")
 const mongoose = require("mongoose");
 const passport = require("passport");
 const users = require("./routes/users");
+require("dotenv")
+const app = express();
+
 
 
 const PORT = process.env.PORT || 3001;
@@ -41,7 +43,7 @@ app.use(passport.initialize());
 // Passport config
 require("./config/passport")(passport);
 // Routes
-app.use("/api/users", users);
+app.use("/api/df/", users);
 
 app.use("/api", apiRoutes);
 

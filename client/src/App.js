@@ -2,14 +2,20 @@ import React from 'react';
 
 
 
-import Signup from './components/signup'
-
-function App() {
-  return (
-    <div className="App">
-      <Signup />
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {  }
+  }
+  render() { 
+    return ( 
+      <div>
+        Login Screen
+      </div>
+     );
+  }
 }
-
+ 
 export default App;
+
+

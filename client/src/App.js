@@ -1,16 +1,18 @@
 import React from "react";
 import Login from "./components/Login";
-import Axios from "axios";
 import ChatMain from "./components/ChatMain";
+
 
 class App extends React.Component {
   state = {
     currUser: "",
-    currView: "LOGIN"
+    currView: "LOGIN",
   };
 
+  
+
   onLoginUser = username => {
-    Axios.get("http://localhost:3001/api/df/users", {
+    fetch("http://localhost:3001/api/users/createUser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -27,15 +29,11 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.currView)
     if (this.state.currView === "LOGIN") {
       return <Login onSubmit ={this.onLoginUser}/>;
-    }
-
-    if (this.state.currView ==="CHAT_MAIN_SCREEN"){
+    } else if (this.state.currView ==="CHAT_MAIN_SCREEN"){
       return <ChatMain currUser={this.state.currUser} />
     }
-    
   
   }
 }

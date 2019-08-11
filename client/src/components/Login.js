@@ -8,10 +8,13 @@ class Login extends React.Component {
 
   onChange = e => {
     this.setState({
-        currUser: e.target.value
+        currUser: e.target.value,
     })
+    if(this.props.onChange){
+      this.props.onChange()
+    }
   }
-  
+
   onSubmit = e => {
       e.preventDefault()
       this.props.onSubmit(this.state.currUser)
@@ -19,7 +22,6 @@ class Login extends React.Component {
   render() {
     return (
       <div>
-        <div>
           <h2>What is Your Username?</h2>
           <form onSubmit={this.onSubmit}>
             <input
@@ -29,7 +31,6 @@ class Login extends React.Component {
             />
             <input type="submit" />
           </form>
-        </div>
       </div>
     );
   }

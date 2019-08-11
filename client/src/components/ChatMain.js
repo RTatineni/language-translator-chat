@@ -19,7 +19,7 @@ class ChatMain extends React.Component {
       instanceLocator: "v1:us1:28eb7916-1ae3-4109-a54b-0172e85d05d6",
       userId: this.props.currUser,
       tokenProvider: new Chatkit.TokenProvider({
-        url: "http://localhost:3001/api/users/authenticate"
+        url: "/api/users/authenticate"
       })
     })
     chatManager
@@ -32,7 +32,7 @@ class ChatMain extends React.Component {
           hooks: {
             onMessage: message => {
               console.log(message.text)
-              Axios.get("http://localhost:3001/api/translate/"+message.text +"/"+this.state.lang, {
+              Axios.get("/api/translate/"+message.text +"/"+this.state.lang, {
                 method: "POST",
                 headers: {
                 "Content-Type": "application/json"

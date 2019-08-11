@@ -9,10 +9,8 @@ class App extends React.Component {
     currView: "LOGIN",
   };
 
-  
-
   onLoginUser = username => {
-    fetch("http://localhost:3001/api/users/createUser", {
+    fetch("/api/users/createUser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

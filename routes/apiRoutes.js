@@ -22,7 +22,6 @@ router.get('/translate/:text/:lang', (req, res) => {
     if (err) {
       return res.send(err);
     };
-    console.log(data)
     res.json(data);
   });
 });

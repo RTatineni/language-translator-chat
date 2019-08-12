@@ -3,7 +3,7 @@ import React from "react";
 class MessageView extends React.Component {
   
   state = {
-
+    
   };
 
   render() {
@@ -11,7 +11,6 @@ class MessageView extends React.Component {
       <div>
         <ul>
           {this.props.messageList.map((message, index) => (
-            
             <li key={index}>
               <div>
                 <span>{message[1]}</span>{" "}

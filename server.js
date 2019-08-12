@@ -19,7 +19,7 @@ app.use(
       extended: false
     })
   );
-  app.use(bodyParser.json());
+app.use(bodyParser.json());
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -27,7 +27,6 @@ if (process.env.NODE_ENV === "production") {
 
 // DB Config
 const db = keys.mongoURI
-
 
 mongoose
   .connect(

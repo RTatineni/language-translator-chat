@@ -10,7 +10,7 @@ class ChatMain extends React.Component {
     currUser: {},
     currView: {},
     messages:[],
-    lang: 'es',
+
   };
 
 
@@ -31,14 +31,12 @@ class ChatMain extends React.Component {
           messageLimit: 2,
           hooks: {
             onMessage: message => {
-              console.log(message.text)
-              Axios.get("/api/translate/"+message.text +"/"+this.state.lang, {
+              Axios.get("/api/translate/"+message.text +"/"+this.props.lang, {
                 method: "POST",
                 headers: {
                 "Content-Type": "application/json"
                 },
               }).then(response => {
-                console.log(this.state.messages)
                 this.setState({
                   messages:[...this.state.messages,[response.data,message.senderId]],
                 })
@@ -53,6 +51,7 @@ class ChatMain extends React.Component {
 
     }
 
+    
   sendMessage = (messageText) => {
     
         this.state.currUser.sendMessage({
@@ -61,12 +60,13 @@ class ChatMain extends React.Component {
       })
 
     }
-  
+
   render() {
-    console.log(this.state.messages)
+  
     return( 
         <div >
            CHAT SCREEN {this.state.currUser.id}
+           
             <SendMessage onSubmit={this.sendMessage} />
             <MessageView messageList={this.state.messages}  />
         </div>
